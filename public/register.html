@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+                publicKey: "WW7yTlp0a_yp68Ydd"
+            })
+        })()
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    </link>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav>
+        <img src="images/school_logo.png" alt="logo">
+        <div class="navigation">
+            <ul class="menu-ul">
+                <i id="menu-close" class="fas fa-times"></i>
+                <li class="menu"><a href="index.html">홈</a></li>
+                <li class="menu"><a href="blog.html">블로그</a></li>
+                <li class="menu"><a href="board.html">친구소식</a></li>
+                <li class="menu login"><a href="login.html">로그인</a></li>
+                <li class="menu logout"><a href="index.html">로그아웃</a></li>
+                <li class="menu register" class="active"><a href="register.html">회원가입</a></li>
+                <li class="menu myPage"><a href="mypage.html">마이페이지</a></li>
+            </ul>
+            <img src="images/menu.png" alt="menu" id="menu-btn">
+        </div>
+    </nav>
+
+    <!-- register -->
+
+    <section id="register" class="section">
+        <div class="register-container">
+            <h1 class="title">회원가입</h1>
+            <div class="box name">
+                <label for="">이름</label>
+                <input id="name" type="text">
+            </div>
+            <div class="box phone">
+                <label for="">전화번호</label>
+                <input id="register-phone" type="text">
+            </div>
+            <form id="email-form">
+                <div class="box email">
+                    <label for="">이메일</label>
+                    <input name="email" id="register-email" type="email">
+                </div>
+                <input name="passcode" class="passcode" type="text">
+                <div class="box codeVerify">
+                    <label for="">인증코드</label>
+                    <div class="codeVerify-container">
+                        <input id="register-code" type="text">
+                        <button type="submit" class="code-btn">코드 보내기</button>
+                    </div>
+                </div>
+            </form>
+            <p>※ '코드 보내기' 버튼을 클릭하면, 입력한 메일주소로 인증코드를 발송합니다</p>
+            <div class="box password">
+                <label for="">비밀번호</label>
+                <input id="register-password" type="text">
+            </div>
+            <div class="box passwordVerify">
+                <label for="">비밀번호 확인</label>
+                <input id="passwordVerify" type="text">
+            </div>
+            <div>
+                <button class=" btn register-btn">회원가입</button>
+            </div>
+            <a href="./login.html">로그인으로</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="container">
+            <div class="footer-img">
+                <img src="./images/footer-logo.jpg" alt="">
+                <div class="footer-name">
+                    <h3>용호중학교</h3>
+                    <h3>1학년 커뮤니티</h3>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>관리자: 김시우(kimsiu1009@gmail.com)</p>
+                <p>@Copyright reserved by siu kim</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/loginLogout.js"></script>
+</body>
+
+</html>

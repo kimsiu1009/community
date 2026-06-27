@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        </link>
+    </head>
+    
+    <body>
+    
+        <!-- HEADER -->
+    
+        <nav>
+            <img src="images/school_logo.png" alt="logo">
+            <div class="navigation">
+                <ul class="menu-ul">
+                    <i id="menu-close" class="fas fa-times"></i>
+                    <li class="menu"><a href="index.html">홈</a></li>
+                    <li class="menu" class="active"><a href="blog.html">블로그</a></li>
+                    <li class="menu"><a href="board.html">친구소식</a></li>
+                    <li class="menu login"><a href="login.html">로그인</a></li>
+                    <li class="menu logout"><a href="index.html">로그아웃</a></li>
+                    <li class="menu register"><a href="register.html">회원가입</a></li>
+                    <li class="menu myPage"><a href="mypage.html">마이페이지</a></li>
+                </ul>
+                <img src="images/menu.png" alt="menu" id="menu-btn">
+            </div>
+        </nav>
+    
+        <!-- BLOG-HEADER -->
+    
+        <section id="blog-header">
+            <div class="container">
+                <h1># BLOG</h1>
+            </div>
+        </section>
+    
+        <!-- BLOGCONTENT -->
+        <section id="blog-content" class="section">
+            <h1>블로그 작성하기</h1>
+            <div class="container">
+                <div id="post-images">
+                    <img id="preview" src="./images/blog_img.png" alt="preview">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <div class="btn-container left">
+                        <button id="fileSelect">이미지 선택</button>
+                    </div>
+                </div>
+                <div class="contents">
+                    <div class="data-container">
+                        <p class="para">작성일</p>
+                        <input class="blog-input" id="blog-date" type="text" readonly >
+                    </div>
+                    <div class="data-container">
+                        <p class="para">제목</p>
+                        <input type="text" class="blog-input" id="blog-title"></input>
+                    </div>
+                    <div class="data-container">
+                        <p class="para">내용 작성</p>
+                        <textarea class="blog-input" id="blog-text" rows="5" name=""></textarea>
+                    </div>
+                    <div class="btn-container right">
+                        <button id="uploadBtn">저장</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- FOOTER -->
+        <section id="footer">
+            <div class="container">
+                <div class="footer-img">
+                    <img src="./images/footer-logo.jpg" alt="">
+                <div class="footer-name">
+                    <h3>용호중학교</h3>
+                    <h3>1학년 커뮤니티</h3>
+                </div>
+                </div>
+                <div class="footer-content">
+                    <p>관리자: 김시우(kimsiu1009@gmail.com)</p>
+                    <p>@Copyright reserved by siu kim</p>
+                </div>
+            </div>
+        </section>
+    
+        <script src="./js/script.js"></script>
+        <script src="./js/blogContent.js"></script>
+        <script src="./js/loginLogout.js"></script>
+    </body>
+    
+    </html>
+</body>
+</html>

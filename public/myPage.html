@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    </link>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <nav>
+        <img src="images/school_logo.png" alt="logo">
+        <div class="navigation">
+            <ul class="menu-ul">
+                <i id="menu-close" class="fas fa-times"></i>
+                <li class="menu"><a href="index.html">홈</a></li>
+                <li class="menu"><a href="blog.html">블로그</a></li>
+                <li class="menu"><a href="board.html">친구소식</a></li>
+                <li class="menu login"><a href="login.html">로그인</a></li>
+                <li class="menu logout"><a href="index.html">로그아웃</a></li>
+                <li class="menu register"><a href="register.html">회원가입</a></li>
+                <li class="menu myPage" class="active"><a href="mypage.html">마이페이지</a></li>
+            </ul>
+            <img src="images/menu.png" alt="menu" id="menu-btn">
+        </div>
+    </nav>
+
+    <!-- MYPAGE-HEADER -->
+    
+    <section id="mypage-header">
+        <div class="container">
+            <h1># MYPAGE</h1>
+        </div>
+    </section>
+
+    <!-- mypage -->
+
+    <section id="mypage" class="section">
+        <div class="mypage-container">
+            <h1 class="title">마이페이지</h1>
+            <div class="btn-container">
+                <button class="btn edit-btn">수정하기</button>
+            </div>
+            <div class="mypage-container-list">
+                <div class="name">
+                    <label for="">이름</label>
+                    <input id="name" type="text" readonly>
+                </div>
+                <div class="phone">
+                    <label for="">전화번호</label>
+                    <input id="phone" type="text">
+                </div>
+                <div class="password-title">
+                    <i class="password-icon fas fa-unlock-alt"></i>
+                    <h2>비밀번호 변경</h4>
+                </div>
+                <div class="password">
+                    <label for="">비밀번호</label>
+                    <input id="password" type="password">
+                </div>
+                <div class="passwordVerify">
+                    <label for="">비밀번호 확인</label>
+                    <input id="passwordVerify" type="password">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="container">
+            <div class="footer-img">
+                <img src="./images/footer-logo.jpg" alt="">
+                <div class="footer-name">
+                    <h3>용호중학교</h3>
+                    <h3>1학년 커뮤니티</h3>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>관리자: 김시우(kimsiu1009@gmail.com)</p>
+                <p>@Copyright reserved by siu kim</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/myPage.js"></script>
+    <script src="./js/loginLogout.js"></script>
+</body>
+
+</html>

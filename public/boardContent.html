@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    </link>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <nav>
+        <img src="images/school_logo.png" alt="logo">
+        <div class="navigation">
+            <ul class="menu-ul">
+                <i id="menu-close" class="fas fa-times"></i>
+                <li class="menu"><a href="index.html">홈</a></li>
+                <li class="menu"><a href="blog.html">블로그</a></li>
+                <li class="menu" class="active"><a href="board.html">친구소식</a></li>
+                <li class="menu login"><a href="login.html">로그인</a></li>
+                <li class="menu logout"><a href="index.html">로그아웃</a></li>
+                <li class="menu register"><a href="register.html">회원가입</a></li>
+                <li class="menu myPage"><a href="mypage.html">마이페이지</a></li>
+            </ul>
+            <img src="images/menu.png" alt="menu" id="menu-btn">
+        </div>
+    </nav>
+
+    <!-- board-header -->
+
+    <section id="board-header">
+        <div class="container">
+            <h1># BOARD</h1>
+        </div>
+    </section>
+
+    <!-- board-CONTENT -->
+
+    <section id="board-content" class="section">
+        <div class="board-content-container">
+            <div class="title">
+                <label for="">제목</label>
+                <input id="title" type="text">
+            </div>
+            <div class="author-date">
+                <div class="author">
+                    <label for="">작성자</label>
+                    <input id="author" type="text" readonly>
+                </div>
+                <div class="date">
+                    <label for="">작성일자</label>
+                    <input id="date" type="text" readonly>
+                </div>
+            </div>
+            <div class="content">
+                <label for="">내용</label>
+                <textarea name="" id="content"></textarea>
+            </div>
+            <div class="btn-container">
+                <button class="btn save">저장</button>
+                <button class="btn cancel">취소</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="container">
+            <div class="footer-img">
+                <img src="./images/footer-logo.jpg" alt="">
+                <div class="footer-name">
+                    <h3>용호중학교</h3>
+                    <h3>1학년 커뮤니티</h3>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>관리자: 김시우(kimsiu1009@gmail.com)</p>
+                <p>@Copyright reserved by siu kim</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/boardContent.js"></script>
+    <script src="./js/loginLogout.js"></script>
+</body>
+
+</html>

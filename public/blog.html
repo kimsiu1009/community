@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    </link>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <nav>
+        <img src="images/school_logo.png" alt="logo">
+        <div class="navigation">
+            <ul class="menu-ul">
+                <i id="menu-close" class="fas fa-times"></i>
+                <li class="menu"><a href="index.html">홈</a></li>
+                <li class="menu"  class="active"><a href="blog.html">블로그</a></li>
+                <li class="menu"><a href="board.html">친구소식</a></li>
+                <li class="menu login"><a href="login.html">로그인</a></li>
+                <li class="menu logout"><a href="index.html">로그아웃</a></li>
+                <li class="menu register"><a href="register.html">회원가입</a></li>
+                <li class="menu myPage"><a href="mypage.html">마이페이지</a></li>
+            </ul>
+            <img src="images/menu.png" alt="menu" id="menu-btn">
+        </div>
+    </nav>
+
+    <!-- BLOG-HEADER -->
+
+    <section id="blog-header">
+        <div class="container">
+            <h1># BLOG</h1>
+        </div>
+    </section>
+
+    <!-- BLOG -->
+    <section id="blog" class="section">
+
+        <h1>블로그</h1>
+        <div class="btn-container">
+            <div class="search-container">
+                <div class="search-box-container">
+                    <label for="">작성자</label>
+                    <input type="text" class="search-author">
+                </div>
+                <button class="blog-search-btn btn">검색</button>
+            </div>
+            <div class="blog-btn-container">
+                <button class="btn blog-btn">작성하기</button>
+            </div>
+        </div>
+        <div class="container blog-list-container">
+            
+        </div>
+
+        <!-- PAGINATION -->
+    
+        <div class="page-container">
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <section id="footer">
+        <div class="container">
+            <div class="footer-img">
+                <img src="./images/footer-logo.JPG" alt="">
+                <div class="footer-name">
+                    <h3>용호중학교</h3>
+                    <h3>1학년 커뮤니티</h3>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>관리자: 김시우(kimsiu1009@gmail.com)</p>
+                <p>@Copyright reserved by siu kim</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/blog.js"></script>
+    <script src="./js/loginLogout.js"></script>
+</body>
+
+</html>
