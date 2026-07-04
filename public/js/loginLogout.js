@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", function(){
         register.style.display = "none"
         
     } else {
-        login.style.display = "block"      
+        login.style.display = "block"
         logout.style.display = "none"
         register.style.display = "block"
     }
