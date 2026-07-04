@@ -4,14 +4,14 @@ const logout = document.querySelector(".logout")
 
 window.addEventListener("DOMContentLoaded", async function() {
 
-    await fetch("http://192.168.0.152:3500/blog/list")
+    await fetch("/blog/list")
     .then((response) => response.json())
     .then((data) => {
         const blogs = data.result.map(function(value, index, array) {
             return `
                 <div class="card">
                     <div class="card-img">
-                        <img class="img" src="${'http://192.168.0.152:3500/blog_images/' + value.image}" alt="">
+                        <img class="img" src="${'/blog_images/' + value.image}" alt="">
                     </div>
                     <div class="title">${value.title}</div>
                     <div class="desc">
@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", async function() {
                         <div class="content">${value.content}</div>
                     </div>  
                     <div class="btn-container">
-                        <a href="http://192.168.0.152:3500/blog.html" class="btn blog-btn">더 보기</a>
+                        <a href="/blog.html" class="btn blog-btn">더 보기</a>
                     </div>     
                 </div>
             `
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", async function() {
         container.innerHTML = blogs
     })
 
-    await fetch("http://192.168.0.152:3500/board/list")
+    await fetch("/board/list")
     .then((response) => response.json())
     .then((data) => {
         console.log(data)
@@ -59,9 +59,9 @@ function goBoard() {
     const user = JSON.parse(localStorage.getItem("elementry"))
 
     if (!user) {
-        location.href = "http://192.168.0.152:3500/login.html"
+        location.href = "/login.html"
     } else {
-        location.href='http://192.168.0.152:3500/board.html'
+        location.href='/board.html'
     }   
 
 }

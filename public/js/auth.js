@@ -10,7 +10,7 @@ const logout = document.querySelector(".logout")
 
 loginBtn.addEventListener("click", function() {
 
-    fetch("http://192.168.0.152:3500/auth/login", {
+    fetch("/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -32,7 +32,7 @@ loginBtn.addEventListener("click", function() {
             name: data.name,
             phone: data.phone
         }))
-        window.location.href = "http://192.168.0.152:3500/index.html"
+        window.location.href = "/index.html"
     })
 
 })
@@ -55,7 +55,7 @@ registerBtn.addEventListener("click", function() {
         return
     }
 
-    fetch("http://192.168.0.152:3500/auth/register", {
+    fetch("/auth/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -73,7 +73,7 @@ registerBtn.addEventListener("click", function() {
             return
         } 
         alert("사용자 등록이 정상적으로 처리되었습니다")
-        window.location.href = "http://192.168.0.152:3500/login.html"
+        window.location.href = "/login.html"
     })
 })
 

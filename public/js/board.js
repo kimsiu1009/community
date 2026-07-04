@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", function() {
     console.log(user)
     
     if (!user) {
-        location.href = "http://192.168.0.152:3500/login.html"
+        location.href = "/login.html"
         return
     }   
     
@@ -47,7 +47,7 @@ function createBoard(currentPage, author = "", date = "") {
 
     const user = JSON.parse(localStorage.getItem("elementry"))
 
-    fetch("http://192.168.0.152:3500/board/list", {
+    fetch("/board/list", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -118,7 +118,7 @@ function createBoard(currentPage, author = "", date = "") {
                 params.append('content', content)
                 params.append('mode', 'read')
 
-                location.href =`http://192.168.0.152:3500/boardContent.html?${params.toString()}`
+                location.href =`/boardContent.html?${params.toString()}`
             })
 
         })
@@ -141,7 +141,7 @@ function createBoard(currentPage, author = "", date = "") {
                 params.append('content', content)
                 params.append('mode', 'edit')
 
-                location.href =`http://192.168.0.152:3500/boardContent.html?${params.toString()}`
+                location.href =`/boardContent.html?${params.toString()}`
             })
         })
 
@@ -152,7 +152,7 @@ function createBoard(currentPage, author = "", date = "") {
 
                 if (isTrue) {
 
-                    fetch("http://192.168.0.152:3500/board/delete", {
+                    fetch("/board/delete", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -167,7 +167,7 @@ function createBoard(currentPage, author = "", date = "") {
                             alert(data.errorMessage)
                             return
                         }
-                        window.location.href = "http://192.168.0.152:3500/board.html"
+                        window.location.href = "/board.html"
                     })
                     
                 } else {
@@ -193,9 +193,9 @@ btn.addEventListener("click", function() {
     const user = localStorage.getItem("elementry")
 
     if (!user) {
-        location.href =`http://192.168.0.152:3500/login.html`
+        location.href =`/login.html`
     } else {
-        location.href =`http://192.168.0.152:3500/boardContent.html?${params.toString()}`
+        location.href =`/boardContent.html?${params.toString()}`
     }
 
 })

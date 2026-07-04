@@ -33,7 +33,7 @@ editBtn.addEventListener("click", function() {
         return
     }
 
-    fetch("http://192.168.0.152:3500/auth/myPage", {
+    fetch("/auth/myPage", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -53,7 +53,7 @@ editBtn.addEventListener("click", function() {
 
         localStorage.removeItem('elementry')
         alert("비밀번호가 변경되었습니다")
-        window.location.href = "http://192.168.0.152:3500/login.html"
+        window.location.href = "/login.html"
     })
 })
 

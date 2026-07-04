@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function() {
     console.log(user)
 
     if (!user) {
-        location.href = "http://192.168.0.152:3500/login.html"
+        location.href = "/login.html"
         return
     }
 
@@ -77,7 +77,7 @@ saveBtn.addEventListener("click", function() {
 
     if (mode === "new") {
     
-        fetch("http://192.168.0.152:3500/board/save", {
+        fetch("/board/save", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -99,12 +99,12 @@ saveBtn.addEventListener("click", function() {
     
             alert("성공적으로 저장되었습니다")
     
-            window.location.href = "http://192.168.0.152:3500/board.html"
+            window.location.href = "/board.html"
         })
 
     } else if (mode === "edit") {
 
-        fetch("http://192.168.0.152:3500/board/edit", {
+        fetch("/board/edit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -126,7 +126,7 @@ saveBtn.addEventListener("click", function() {
     
             alert("성공적으로 수정되었습니다")
     
-            window.location.href = "http://192.168.0.152:3500/board.html"
+            window.location.href = "/board.html"
         })
 
     }
@@ -134,7 +134,7 @@ saveBtn.addEventListener("click", function() {
 })
 
 cancelBtn.addEventListener("click", function() {
-    location.href = "http://192.168.0.152:3500/board.html"
+    location.href = "/board.html"
 })
 
 logout.addEventListener("click", function() {

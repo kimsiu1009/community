@@ -14,7 +14,7 @@ window.addEventListener("DOMContentLoaded", function() {
     console.log(user)
 
     if (!user) {
-        location.href = "http://192.168.0.152:3500/login.html"
+        location.href = "/login.html"
         return
     }
 
@@ -35,7 +35,7 @@ function createBlog(mode) {
 
     const user = JSON.parse(localStorage.getItem("elementry"))
 
-    fetch("http://192.168.0.152:3500/blog/list", {
+    fetch("/blog/list", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function createBlog(mode) {
             return `
                 <div class="blog-item">
                     <div class="blog-img-container">
-                        <img src="${"http://192.168.0.152:3500/blog_images/" + value.image}" alt="blog_images">
+                        <img src="${"/blog_images/" + value.image}" alt="blog_images">
                         <div class="blog-title-container">
                             <div class="blog-data">
                                 <p class="title">${value.title}</p>
@@ -88,7 +88,7 @@ function createBlog(mode) {
 
                     const id = e.currentTarget.dataset.id
     
-                    fetch("http://192.168.0.152:3500/blog/delete", {
+                    fetch("/blog/delete", {
                             method: "POST",
                             headers: {
                                 "Content-Type": "application/json",
@@ -120,9 +120,9 @@ blogBtn.addEventListener("click", function() {
     console.log(user)
 
     if(!user) {
-        location.href = "http://192.168.0.152:3500/login.html"
+        location.href = "/login.html"
     } else {
-        location.href = "http://192.168.0.152:3500/blogContent.html"
+        location.href = "/blogContent.html"
     }
     
 })

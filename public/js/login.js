@@ -5,7 +5,7 @@ const logout = document.querySelector(".logout")
 
 loginBtn.addEventListener("click", function() {
 
-    fetch("http://192.168.0.152:3500/auth/login", {
+    fetch("/auth/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -27,7 +27,7 @@ loginBtn.addEventListener("click", function() {
             name: data.name,
             phone: data.phone
         }))
-        window.location.href = "http://192.168.0.152:3500/index.html"
+        window.location.href = "/index.html"
     })
 
 })

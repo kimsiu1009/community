@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", function() {
     console.log(user)
 
     if (!user) {
-        location.href = "http://192.168.0.152:3500/login.html"
+        location.href = "/login.html"
         return
     }   
 })
@@ -53,7 +53,7 @@ uploadBtn.addEventListener("click", async function() {
     formData.append("content", blogContent.value)
     formData.append("title", blogTitle.value)
 
-    await fetch("http://192.168.0.152:3500/blog/new", {
+    await fetch("/blog/new", {
         method: "POST",
         body: formData,
     }) 
