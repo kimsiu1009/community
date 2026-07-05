@@ -59,6 +59,7 @@ function createBlog(mode) {
                                     <div class="author-date">
                                         <p>${value.name} &nbsp;&nbsp;&nbsp; ${value.date}</p>
                                     </div>
+                                    {}
                                     <div class="blog-btn-container">
                                         <i class="delete fas fa-trash-alt" data-id=${value._id}></i>
                                     </div>
