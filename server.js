@@ -17,6 +17,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(cors())
 app.use(express.static(path.join(__dirname, "public")))
+app.use(express.static(path.join(__dirname, "../blog_images")))
 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, 'public', "/index.html"))
@@ -31,7 +32,7 @@ app.get("/index.html", function (req, res) {
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        const uploadPath = 'public/blog_images/'
+        const uploadPath = '../blog_images/'
 
         if (!fs.existsSync(uploadPath)) {
             fs.mkdirSync(uploadPath)

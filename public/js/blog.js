@@ -51,7 +51,7 @@ function createBlog(mode) {
             return `
                 <div class="blog-item">
                     <div class="blog-img-container">
-                        <img src="${"/blog_images/" + value.image}" alt="blog_images">
+                        <img src="${value.image}" alt="blog_images">
                         <div class="blog-title-container">
                             <div class="blog-data">
                                 <p class="title">${value.title}</p>
