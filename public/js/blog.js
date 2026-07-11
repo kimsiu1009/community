@@ -8,9 +8,10 @@ const searchAuthor = document.querySelector(".search-author")
 let totalPages
 let currentPage
 
-window.addEventListener("DOMContentLoaded", function() {
+const user = JSON.parse(localStorage.getItem("elementry"))
 
-    const user = JSON.parse(localStorage.getItem("elementry"))
+window.addEventListener("DOMContentLoaded", function() {
+    
     console.log(user)
 
     if (!user) {
@@ -59,14 +60,15 @@ function createBlog(mode) {
                                     <div class="author-date">
                                         <p>${value.name} &nbsp;&nbsp;&nbsp; ${value.date}</p>
                                     </div>
-                                    {}
-                                    <div class="blog-btn-container">
-                                        <i class="delete fas fa-trash-alt" data-id=${value._id}></i>
-                                    </div>
+                                    ${user.phone === value.phone?
+                                        `
+                                        <div class="blog-btn-container">
+                                            <i class="delete fas fa-trash-alt" data-id=${value._id}></i>
+                                        </div>
+                                        `:""}
                                 </div>                        
                             </div>
-
-                        </div>         
+                        </div>
                     </div>
                 </div>
             `

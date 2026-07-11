@@ -3,6 +3,10 @@ const loginPassword = document.getElementById("loginPassword")
 const loginBtn = document.querySelector(".loginBtn")
 const logout = document.querySelector(".logout")
 
+loginPhone.addEventListener("keyup", function(event) {
+    inputPhoneNumber(event.target)
+})
+
 loginBtn.addEventListener("click", function() {
 
     fetch("/auth/login", {
