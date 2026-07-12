@@ -53,7 +53,7 @@ uploadBtn.addEventListener("click", async function() {
     formData.append("content", blogContent.value)
     formData.append("title", blogTitle.value)
 
-    await fetch("/blog/new", {
+    await fetch("http://192.168.0.152:3500/blog/new", {
         method: "POST",
         body: formData,
     }) 

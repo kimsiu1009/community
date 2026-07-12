@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", async function() {
             return `
                 <div class="card">
                     <div class="card-img">
-                        <img class="img" src="${'/blog_images/' + value.image}" alt="">
+                        <img class="img" src="${value.image}" alt="">
                     </div>
                     <div class="title">${value.title}</div>
                     <div class="desc">
@@ -23,7 +23,7 @@ window.addEventListener("DOMContentLoaded", async function() {
                     </div>  
                     <div class="btn-container">
                         <a href="/blog.html" class="btn blog-btn">더 보기</a>
-                    </div>     
+                    </div>
                 </div>
             `
         }).join("")
